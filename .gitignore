@@ -1,2 +1,13 @@
+# Virtual environments Python
+Calculator-backend/.venv/
+Calculator-backend/venv/
+
+# configuration of PyCharm / IntelliJ
+Calculator-backend/.idea/
+
+# Node dependences
 Calculator-frontend/node_modules/
 
+# Arquivos temporários
+Calculator-backend/__pycache__/
+*.pyc
