@@ -29,40 +29,65 @@ function App() {
               Prime numbers sequence
             </p>
             <p>
-              Conversion of decimal - binary
+              Conversion of decimal ↔ binary
             </p>
           </div>
           <div className='Right_buttons'>
             <p>
-              Common Calculations
+              Geometric sequence
             </p>
             <p>
-              Fibonacci sequence
+              Tribonacci sequence
             </p>
             <p>
-              Factorial calculation
+              Alternating sequence
             </p>
             <p>
-              Perfect squares sequence
+              Cubes sequence
             </p>
             <p>
-              Prime numbers sequence
+              Triangular numbers sequence
             </p>
             <p>
-              Conversion of decimal - binary
+              Conversion of decimal ↔ hexadecimal
             </p>
           </div>
         </div>
       </div>
       <div className='Result_area'>
         <div className='Monitor'>
-
+          <h2>
+            The instructions and results will appear here! 
+          </h2>
+          <h4>
+            Below you can enter numbers directly into the available inputs or use the numeric keypad.
+          </h4>
+          <p>
+            Result:
+          </p>
         </div>
         <div className='Forms'>
 
         </div>
         <div className='Keypad'>
-
+          <div>
+            <p>1</p>
+            <p>4</p>
+            <p>7</p>
+            <p>0</p>
+          </div>
+          <div>
+            <p>2</p>
+            <p>5</p>
+            <p>8</p>
+            <p className='Clean_but'>Clean</p>
+          </div>
+          <div>  
+            <p>3</p>
+            <p>6</p>
+            <p>9</p>
+            <p className='Calc_but'>Calculate</p>
+          </div>  
         </div>
       </div>
     </div>
