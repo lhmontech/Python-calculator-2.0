@@ -105,12 +105,25 @@ def cubes(Value1, Value2):
             i += 1
         return ' '.join(map(str, cubesList))
 
-try:
-    Value1 = int(input('Enter the number: '))
-    Ratio = int(input('Enter the number: '))
-    Value2 = int(input('Enter the limit: '))
-except ValueError:
-    print('Error! Enter a valid number!')
+def binDecimal(Value1):
+    if Value1 == 0:
+        return '0 = 0'
+    else:
+        binaryList = []
+        while Value1 > 0:
+            binary = Value1 % 2
+            binaryList.append(binary)
+            Value1 = Value1 // 2
+        return ''.join(map(str, binaryList[::-1]))
 
-result = geometric(Value1, Ratio, Value2)
-print(result)
+def hexaDecimal(Value1):
+    if Value1 == 0:
+        return '0 = 0'
+    else:
+        hexaMap = '0123456789ABCDEF'
+        hexaList = []
+        while Value1 > 0:
+            hexa = Value1 % 16
+            hexaList.append(hexaMap[hexa])
+            Value1 = Value1 // 16
+        return ''.join(map(str, hexaList[::-1]))
