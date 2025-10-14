@@ -1,0 +1,38 @@
+import Keypad from "../components/Keypad";
+import { useState } from "react";
+import '../App.css';
+
+function Fibonacci() {
+  const [currentValue, setCurrentValue] = useState("");
+  const [values, setValues] = useState([]);
+  const maxValues = 3;
+  const isAddDisabled = values.length >= maxValues;
+  
+  function handleAdd() {
+  setValues(prev => [...prev, currentValue]);
+  setCurrentValue("");
+  }
+  return (
+    <div className='Result_area'>
+        <div className='Monitor'>
+          <p>Welcome to the Fibonacci sequence!</p>   
+          <p>Enter two initial values and a limit value to obtain the sequence. 
+            Remember that the initial values cannot be 0 and the limit value must 
+            be greater than the initial ones.</p>
+          <ul>
+            {values.map((v, i) => <li key={i}>Value{i+1} = {v}</li>)}
+          </ul>
+          <p>Result:</p>
+        </div>
+        <div className='Forms'>
+                <label>Enter the first value:<br />
+                  <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
+                <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>
+                </label>
+                
+        </div>
+        <Keypad setCurrentValue={setCurrentValue} setValues={setValues} />
+    </div>
+  );
+}
+export default Fibonacci;

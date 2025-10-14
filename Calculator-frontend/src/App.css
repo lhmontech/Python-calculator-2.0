@@ -6,28 +6,35 @@ body {
 }
 
 .App {
-  margin: 20px 150px 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .Menu {
-  width: 40%;
-  min-width: 300px;
-  height: 100%;
-  margin-right: 25px;
+  flex: 1 1 600px;
   padding: 15px;
   background: #96E6B3;
   border-radius: 25px;
+  font-family: 'Inter';
+  font-style: normal;
 }
 
 .Menu header {
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 20px;
   color: #31393C;
   text-align: center;
+}
+
+.Result_area {
+  flex: 2 1 600px;
 }
 
 .Menu_buttons {
@@ -35,7 +42,7 @@ body {
   justify-content: center; 
 }
 
-.Left_buttons {
+.Menu_buttons div{
   display: flex;
   flex-direction: column; 
   justify-content: center; 
@@ -43,20 +50,14 @@ body {
   padding: 5px;
 }
 
-.Right_buttons {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center;
-  padding: 5px;
-}
-
-.Left_buttons p {
+.Menu_buttons a {
+  text-decoration: none;
   width: 80%;
   min-width: 120px;
   max-width: 300px;
   height: 100px;
-  margin: 10px;
+  margin: 8px;
+  padding: 5px;
   background: #2176FF;
   border-radius: 18px;
   align-content: center;
@@ -68,27 +69,8 @@ body {
   color: #FFFFFF;
 }
 
-.Right_buttons p {
-  width: 80%;
-  min-width: 120px;
-  max-width: 300px;
-  height: 100px;
-  margin: 10px;
-  background: #2176FF;
-  border-radius: 18px;
-  align-content: center;
-  text-align: center;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: #FFFFFF;
-}
-
-.Result_area {
-  width: 60%;
-  height: 100%;
-  margin-left: 25px;
+.Menu_buttons a:hover {
+  background: #1755b8;
 }
 
 .Monitor {
@@ -102,13 +84,57 @@ body {
   border-radius: 25px;
   font-family: 'IBM Plex Mono';
   font-style: normal;
-  font-size: 20px;
+}
+
+.Monitor p:nth-child(1) {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.Monitor p:nth-child(2) {
+  font-size: 22px;
 }
 
 .Forms {
-  height: 25%;
-  min-height: 250px;
   margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Forms button {
+  font-size: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  height: 40px;
+  width: 10%;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.Forms label {
+  flex: 1;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.Forms input {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  height: 40px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
 }
 
 .Keypad {
@@ -119,8 +145,6 @@ body {
 }
 
 .Keypad div {
-  width: 30%;
-  margin: 20px;
   text-align: center;
 }
 
@@ -132,11 +156,14 @@ body {
   background: #2176FF;
 }
 
-.Keypad p {
+.Keypad button {
   background: #4F5B60;
   align-content: center;
-  height: 40px;
-  min-width: 80px;
+  cursor: pointer;
+  height: 50px;
+  margin: 10px 0;
+  width: 200px;
+  border: none;
   border-radius: 17px;
   font-family: 'Inter';
   font-style: normal;
