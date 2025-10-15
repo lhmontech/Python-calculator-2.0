@@ -25,10 +25,10 @@ function Fibonacci() {
             {values.map((v, i) => <li key={i}>Value{i+1} = {v}</li>)}
           </ul>
           <p>Result:</p>
-          {result?.sequence.error ? (
-              <p style={{ color: '#ff513aff' }}>{result.sequence.error}</p>
+          {result?.error ? (
+              <p style={{ color: '#ff513aff' }}>{result.error}</p>
             ) : (
-              <p>{result?.sequence?.sequence?.join(", ")}</p>
+              <p>{result?.sequence?.join(", ")}</p>
           )}
         </div>
         <div className='Forms'>

@@ -16,5 +16,5 @@ def fibonacci_route():
         return jsonify({'Error!': 'You must send exactly 3 values!'})
     Value1, Value2, limit = values
     result = fibonacci(Value1, Value2, limit)
-    return jsonify({'sequence': result})
+    return jsonify(result)
     
