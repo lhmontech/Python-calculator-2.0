@@ -1,8 +1,7 @@
 import '../App.css';
 import { useState } from "react";
 
-function Keypad({setCurrentValue, setValues, values, operation}) {
-  
+function Keypad({setCurrentValue, setValues, setResult, values, operation}) {
   function onKeyPress(num) {
     setCurrentValue(prev => prev + num);
   }
@@ -10,6 +9,7 @@ function Keypad({setCurrentValue, setValues, values, operation}) {
   function handleDelete() {
     setValues([]);
     setCurrentValue("");
+    setResult(null);
   }
 
   function handleCalculate() {

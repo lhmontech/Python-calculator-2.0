@@ -25,19 +25,24 @@ function Fibonacci() {
             {values.map((v, i) => <li key={i}>Value{i+1} = {v}</li>)}
           </ul>
           <p>Result:</p>
+          {result?.error ? (
+              <p style={{ color: '#ff513aff' }}>{result.error}</p>
+            ) : (
+              <p>{result?.sequence?.join(", ")}</p>
+          )}
         </div>
         <div className='Forms'>
-                Enter the first value:<br />
+                Enter here the values:<br />
                 <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
                 <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>
                 
         </div>
         <Keypad 
           setCurrentValue={setCurrentValue} 
-          setValues={setValues} 
+          setValues={setValues}
+          setResult={setResult} 
           values={values}
           operation="fibonacci"
-          setResult={setResult}
         />
     </div>
   );
