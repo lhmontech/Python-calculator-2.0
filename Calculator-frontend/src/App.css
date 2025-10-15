@@ -73,6 +73,10 @@ body {
   background: #1755b8;
 }
 
+.btn.active {
+  background-color: #1e3c6d;
+}
+
 .Monitor {
   background: #171717;
   padding: 10px;
@@ -112,7 +116,7 @@ body {
 
 .Forms button {
   font-size: 20px;
-  background: #31393C;
+  background: #4F5B60;
   color: #FFFFFF;
   border: none;
   top: 70%;
@@ -124,6 +128,10 @@ body {
   height: 35px;
   cursor: pointer;
   z-index: 10;
+}
+
+.Forms button:hover {
+  background: #31393C;
 }
 
 .Forms button:disabled {
@@ -186,4 +194,16 @@ body {
   font-size: 20px;
   color: #FFFFFF;
   padding: 5px;
+}
+
+.Keypad .Clean_but:hover {
+  background: #b83445;
+}
+
+.Keypad .Calc_but:hover {
+  background: #1b62d4;
+}
+
+.Keypad button:hover {
+  background: #3f484d;
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../App.css';
 
 function Menu() {
@@ -13,20 +13,44 @@ function Menu() {
         </header>
         <div className='Menu_buttons'>
           <div>
-            <Link to="/">Common Calculations</Link>
-            <Link to="/fibonacci">Fibonacci sequence</Link>
-            <Link to="/">Factorial calculation</Link>
-            <Link to="/">Perfect squares sequence</Link>
-            <Link to="/">Prime numbers sequence</Link>
-            <Link to="/">Conversion of decimal ↔ binary</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Common Calculations
+            </NavLink>
+            <NavLink to="/fibonacci" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Fibonacci sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Factorial calculation
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Perfect squares sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Prime numbers sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Conversion of decimal ↔ binary
+            </NavLink>
           </div>
           <div>
-            <Link to="/">Geometric sequence</Link>
-            <Link to="/tribonacci">Tribonacci sequence</Link>
-            <Link to="/">Alternating sequence</Link>
-            <Link to="/">Cubes sequence</Link>
-            <Link to="/">Triangular numbers sequence</Link>
-            <Link to="/">Conversion of decimal ↔ hexadecimal</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Geometric sequence
+            </NavLink>
+            <NavLink to="/tribonacci" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Tribonacci sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Alternating sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Cubes sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Triangular numbers sequence
+            </NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+              Conversion of decimal ↔ hexadecimal
+            </NavLink>
           </div>
         </div>
       </div>

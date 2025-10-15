@@ -13,7 +13,9 @@ function Fibonacci() {
     if (currentValue.trim() === "") return;
     setValues(prev => [...prev, Number(currentValue)]);
     setCurrentValue("");
+    setResult(null);
   }
+
   return (
     <div className='Result_area'>
         <div className='Monitor'>
