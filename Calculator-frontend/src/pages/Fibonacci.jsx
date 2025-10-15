@@ -7,10 +7,12 @@ function Fibonacci() {
   const [values, setValues] = useState([]);
   const maxValues = 3;
   const isAddDisabled = values.length >= maxValues;
+  const [result, setResult] = useState(null);
   
   function handleAdd() {
-  setValues(prev => [...prev, currentValue]);
-  setCurrentValue("");
+    if (currentValue.trim() === "") return;
+    setValues(prev => [...prev, Number(currentValue)]);
+    setCurrentValue("");
   }
   return (
     <div className='Result_area'>
@@ -25,13 +27,18 @@ function Fibonacci() {
           <p>Result:</p>
         </div>
         <div className='Forms'>
-                <label>Enter the first value:<br />
-                  <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
+                Enter the first value:<br />
+                <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
                 <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>
-                </label>
                 
         </div>
-        <Keypad setCurrentValue={setCurrentValue} setValues={setValues} />
+        <Keypad 
+          setCurrentValue={setCurrentValue} 
+          setValues={setValues} 
+          values={values}
+          operation="fibonacci"
+          setResult={setResult}
+        />
     </div>
   );
 }
