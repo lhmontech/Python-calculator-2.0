@@ -14,7 +14,11 @@ def fibonacci_route():
     values = data.get('values', [])
     if len(values) != 3:
         return jsonify({'error': 'You must send exactly 3 values!'})
-    Value1, Value2, limit = values
+    try:
+        Value1, Value2, limit = map(int, values)
+    escept ValueError:
+        return jsonify({'error':'All values must be integers!'})
+
     result = fibonacci(Value1, Value2, limit)
     return jsonify(result)
     
