@@ -1,9 +1,5 @@
 # --- fibonacci's function ---
 def fibonacci(Value1, Value2, limit):
-    Value1 = int(Value1)
-    Value2 = int(Value2)
-    limit = int(limit)
-    
     if limit < (Value1 or Value2):
         return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
     elif Value1 == 0 and Value2 == 0:
