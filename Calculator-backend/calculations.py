@@ -3,7 +3,7 @@ def fibonacci(Value1, Value2, limit):
     if limit < (Value1 or Value2):
         return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
     elif Value1 <= 0 and Value2 <= 0:
-        return {'error': 'Both initial values cannot be zero, this creates an infinite sequence!'}
+        return {'error': 'Both initial values cannot be zero or negative, this creates an infinite sequence!'}
     else:
         fibonacciList = []
         while Value1 <= limit:
@@ -16,7 +16,7 @@ def fibonacci(Value1, Value2, limit):
 # --- tribonacci's function ---
 def tribonacci(Value1, Value2, Value3, limit):
     if Value1 <= 0 and Value2 <= 0 and Value3 <= 0:
-        return {'error':'You entered 0 for all three values, this creates an infinite sequence!'}
+        return {'error':'The three initial values cannot be zero or negative, this creates an infinite sequence!'}
     elif limit < (Value1 or Value2 or Value3):
         return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
     else:
