@@ -1,8 +1,13 @@
+# --- fibonacci's function ---
 def fibonacci(Value1, Value2, limit):
+    Value1 = int(Value1)
+    Value2 = int(Value2)
+    limit = int(limit)
+    
     if limit < (Value1 or Value2):
-        return 'Invalid limit! Enter a limit greater than the initial values!'
+        return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
     elif Value1 == 0 and Value2 == 0:
-        return f'Error! You entered {Value1} for both values, this creates an infinite sequence!'
+        return {'error': 'Both initial values cannot be zero, this creates an infinite sequence!'}
     else:
         fibonacciList = []
         while Value1 <= limit:
@@ -10,9 +15,9 @@ def fibonacci(Value1, Value2, limit):
             next = Value1 + Value2
             Value1 = Value2
             Value2 = next
-        return ' '.join(map(str, fibonacciList))
+        return {'sequence': fibonacciList}
 
-
+# tribonacci's function
 def tribonacci(Value1, Value2, Value3, limit):
     if Value1 == 0 and Value2 == 0 and Value3 == 0:
         return f'Error! You entered {Value1} for all three values, this creates an infinite sequence!'
