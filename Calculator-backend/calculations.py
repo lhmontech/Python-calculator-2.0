@@ -2,7 +2,7 @@
 def fibonacci(Value1, Value2, limit):
     if limit < (Value1 or Value2):
         return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
-    elif Value1 == 0 and Value2 == 0:
+    elif Value1 <= 0 and Value2 <= 0:
         return {'error': 'Both initial values cannot be zero, this creates an infinite sequence!'}
     else:
         fibonacciList = []
@@ -15,7 +15,7 @@ def fibonacci(Value1, Value2, limit):
 
 # --- tribonacci's function ---
 def tribonacci(Value1, Value2, Value3, limit):
-    if Value1 == 0 and Value2 == 0 and Value3 == 0:
+    if Value1 <= 0 and Value2 <= 0 and Value3 <= 0:
         return {'error':'You entered 0 for all three values, this creates an infinite sequence!'}
     elif limit < (Value1 or Value2 or Value3):
         return {'error':'Invalid limit! Enter a limit greater than the initial values!'}
@@ -70,6 +70,8 @@ def primes(Value1, Value2):
     primesList = []
     if Value1 > Value2:
         return {'error':'Invalid limit! Enter a limit greater than the initial value!'}
+    elif (Value1 or Value2) <= 0:
+        return {'error':'Prime numbers are not defined for negatives'}
     else:
         for i in range(Value1, Value2 + 1):
             is_prime = i > 1
@@ -107,8 +109,8 @@ def cubes(Value1, Value2):
 
 # --- function decimal to binary ---
 def binDecimal(Value1):
-    if Value1 == 0:
-        return {'error':'0 = 0'}
+    if Value1 <= 0:
+        return {'error':'Is not defined for negative numbers'}
     else:
         binaryList = []
         while Value1 > 0:
@@ -119,8 +121,8 @@ def binDecimal(Value1):
 
 # --- function decimal to hexadecimal ---
 def hexaDecimal(Value1):
-    if Value1 == 0:
-        return {'error':'0 = 0'}
+    if Value1 <= 0:
+        return {'error':'Is not defined for negative numbers'}
     else:
         hexaMap = '0123456789ABCDEF'
         hexaList = []
