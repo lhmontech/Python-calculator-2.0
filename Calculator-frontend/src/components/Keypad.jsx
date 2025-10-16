@@ -14,7 +14,7 @@ function Keypad({setCurrentValue, setValues, setResult, values, operation}) {
 
   function handleCalculate() {
     const endpoint = `http://localhost:5000/${operation}`;
-
+    
     fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json"},
