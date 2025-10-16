@@ -16,7 +16,7 @@ def fibonacci_route():
         return jsonify({'error': 'You must send exactly 3 values!'})
     try:
         Value1, Value2, limit = map(int, values)
-    escept ValueError:
+    except ValueError:
         return jsonify({'error':'All values must be integers!'})
 
     result = fibonacci(Value1, Value2, limit)
