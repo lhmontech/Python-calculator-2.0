@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import { Home, Tribonacci, Fibonacci } from './pages/pages';
+import { Home, Tribonacci, Fibonacci, Primes } from './pages/pages';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="fibonacci" element={<Fibonacci />} />
           <Route path="tribonacci" element={<Tribonacci />} />
+          <Route path="primes" element={<Primes />} />
         </Route>
       </Routes>
     </BrowserRouter>

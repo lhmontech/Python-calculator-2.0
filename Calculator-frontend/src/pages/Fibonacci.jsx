@@ -49,10 +49,9 @@ function Fibonacci() {
           )}
         </div>
         <div className='Forms'>
-                <label>{labelText}</label><br />
-                <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
-                <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>
-                
+          <label>{labelText}</label><br />
+          <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
+          <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>    
         </div>
         <Keypad 
           setCurrentValue={setCurrentValue} 

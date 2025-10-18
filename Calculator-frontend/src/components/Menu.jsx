@@ -25,7 +25,7 @@ function Menu() {
             <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Perfect squares sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/primes" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Prime numbers sequence
             </NavLink>
             <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
