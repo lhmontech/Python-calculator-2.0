@@ -13,42 +13,42 @@ function Menu() {
         </header>
         <div className='Menu_buttons'>
           <div>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/common" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Common Calculations
             </NavLink>
             <NavLink to="/fibonacci" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Fibonacci sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/factorial" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Factorial calculation
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/squares" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Perfect squares sequence
             </NavLink>
             <NavLink to="/primes" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Prime numbers sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/binary" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Conversion of decimal ↔ binary
             </NavLink>
           </div>
           <div>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/geometric" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Geometric sequence
             </NavLink>
             <NavLink to="/tribonacci" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Tribonacci sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/alternating" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Alternating sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/cubes" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Cubes sequence
             </NavLink>
             <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Triangular numbers sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/hexadecimal" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Conversion of decimal ↔ hexadecimal
             </NavLink>
           </div>
