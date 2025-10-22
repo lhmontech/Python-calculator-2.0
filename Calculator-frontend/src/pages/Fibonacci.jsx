@@ -36,7 +36,7 @@ function Fibonacci() {
             be greater than the initial ones.</p>
           <ul>
             {values.map((v, i) => {
-              const names = ["Value1:", "Value2:", "Limit:"];
+              const names = ["1° Value:", "2° Value:", "Limit:"];
               const label = names[i] || `value${i+1}`;
               return <li key={i}>{label} = {v}</li>;
             })}

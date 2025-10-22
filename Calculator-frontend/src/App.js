@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import { Home, Alternating, Tribonacci, Fibonacci, Primes, Binary, Common, Cubes, Factorial, Geometric, Hexadecimal, Squares } from './pages/pages';
+import { Home, Alternating, Tribonacci, Fibonacci, Primes, Binary, Common, Cubes, Factorial, Geometric, Hexadecimal, Squares, Triangular } from './pages/pages';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="geometric" element={<Geometric />} />
           <Route path="hexadecimal" element={<Hexadecimal />} />
           <Route path="squares" element={<Squares />} />
+          <Route path="triangular" element={<Triangular />} />
         </Route>
       </Routes>
     </BrowserRouter>

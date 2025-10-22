@@ -22,3 +22,17 @@ def fibonacci_route():
     result = fibonacci(Value1, Value2, limit)
     return jsonify(result)
     
+# --- factorial's route ---
+@routes.route('/factorial', methods=['POST'])
+def factorial_route():
+    data = request.get_json()
+    values = data.get('values', [])
+    if len(values) != 1:
+        return jsonify({'error': 'You must send exactly 1 value!'})
+    try:
+        Value1 = int(values[0])
+    except ValueError:
+        return jsonify({'error':'All values must be integers!'})
+
+    result = factorial(Value1)
+    return jsonify(result)

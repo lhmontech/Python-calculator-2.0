@@ -29,9 +29,11 @@ function Primes() {
   return (
     <div className='Result_area'>
         <div className='Monitor'>
-          <p>Welcome to the Fibonacci sequence!</p>   
-          <p>Enter the initial and the final value to obtain the sequence within this range. 
-            Remember that the final value must be greater than the initial one.</p>
+          <p>Welcome to the Prime Numbers sequence!</p>   
+          <p>
+            Enter the initial and the final value to obtain the sequence within this range. 
+            Remember that the final value must be greater than the initial one.
+          </p>
           <ul>
             {values.map((v, i) => {
               const names = ["Initial value:", "Final value:"];

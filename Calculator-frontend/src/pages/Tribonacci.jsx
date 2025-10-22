@@ -31,12 +31,15 @@ function Tribonacci() {
   return (
     <div className='Result_area'>
         <div className='Monitor'>
-          <p>Enter three initial values and a limit value to obtain the sequence. 
+          <p>Welcome to the Tribonacci sequence!</p> 
+          <p>
+            Enter three initial values and a limit value to obtain the sequence. 
             Remember that the initial values cannot be 0 and the limit value must 
-            be greater than the initial ones.</p>   
+            be greater than the initial ones.
+          </p>   
           <ul>
             {values.map((v, i) => {
-              const names = ["Value1:", "Value2:", "Limit:"];
+              const names = ["1° Value:", "2° Value:", "Limit:"];
               const label = names[i] || `value${i+1}`;
               return <li key={i}>{label} = {v}</li>;
             })}

@@ -45,7 +45,7 @@ function Menu() {
             <NavLink to="/cubes" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Cubes sequence
             </NavLink>
-            <NavLink to="/" className={({ isActive }) => isActive ? "btn active" : "button"}>
+            <NavLink to="/triangular" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Triangular numbers sequence
             </NavLink>
             <NavLink to="/hexadecimal" className={({ isActive }) => isActive ? "btn active" : "button"}>

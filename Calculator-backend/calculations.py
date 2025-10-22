@@ -40,17 +40,17 @@ def geometric(Value1, Ratio, Value2):
             Value1 = Value1 * Ratio
         return ' '.join(map(str, geometricList))
 
-
+# --- factorial's function ---
 def factorial(Value1):
     if Value1 <= 0:
-        return 'Factorial is not defined for negative numbers'
+        return {'error':'Factorial is not defined for negative numbers'}
     else:
         numbers = []
         result = 1
         for i in range(1, Value1 + 1):
             result = result * i
             numbers.append(i)
-        return result
+        return {'result': result}
 
 
 def squares(Value1, Value2):

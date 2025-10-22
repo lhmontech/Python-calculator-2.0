@@ -10,3 +10,5 @@ export { default as Factorial } from './Factorial';
 export { default as Geometric } from './Geometric';
 export { default as Hexadecimal } from './Hexadecimal';
 export { default as Squares } from './Squares';
+export { default as Triangular } from './Triangular';
+
