@@ -20,7 +20,7 @@ function Common() {
     <div className='Result_area'>
         <div className='Monitor'>
           <p>Welcome to the Common Calculations!</p>   
-          <p>Enter the calculation.
+          <p>Enter the expression you want to calculate.
           </p>
           <p>Result:</p>
           {result?.error ? (
@@ -30,7 +30,7 @@ function Common() {
           )}
         </div>
         <div className='Forms'>
-          <label>Enter the value:</label><br />
+          <label>Enter the expression:</label><br />
           <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
         </div>
         <Keypad 

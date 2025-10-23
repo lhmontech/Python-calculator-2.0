@@ -31,9 +31,9 @@ function Alternating() {
         <div className='Monitor'>
           <p>Welcome to the Alternating sequence!</p>
           <p>
-            Enter the initial value and the number of terms to obtain the sequence.<br/> 
-            The sequence alternates between positive and negative and doubles each term.<br/>
-            Remember that the final value must be greater than the initial one, and the initial cannot be negative.
+            Enter the starting value and the number of terms to obtain the sequence alternating
+            between positive and negative and doubling each term.<br/>
+            Remember that the initial value cannot be negative.
           </p>  
           <ul>
             {values.map((v, i) => {

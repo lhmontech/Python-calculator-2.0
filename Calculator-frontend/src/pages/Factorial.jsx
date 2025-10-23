@@ -20,7 +20,7 @@ function Factorial() {
     <div className='Result_area'>
         <div className='Monitor'>
           <p>Welcome to the Factorial number!</p>   
-          <p>Enter the value to obtain its factorial. 
+          <p>Enter the value to obtain your factorial number.
             Remember that the value cannot be less than 1.
           </p>
           <p>Result:</p>
