@@ -1,3 +1,14 @@
 export { default as Home } from './Home';
+export { default as Alternating } from './Alternating';
 export { default as Tribonacci } from './Tribonacci';
 export { default as Fibonacci } from './Fibonacci';
+export { default as Primes } from './Primes';
+export { default as Binary } from './Binary';
+export { default as Common } from './Common';
+export { default as Cubes } from './Cubes';
+export { default as Factorial } from './Factorial';
+export { default as Geometric } from './Geometric';
+export { default as Hexadecimal } from './Hexadecimal';
+export { default as Squares } from './Squares';
+export { default as Triangular } from './Triangular';
+

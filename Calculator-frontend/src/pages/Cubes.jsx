@@ -2,18 +2,16 @@ import Keypad from "../components/Keypad";
 import { useState } from "react";
 import '../App.css';
 
-function Tribonacci() {
+function Cubes() {
   const [currentValue, setCurrentValue] = useState("");
   const [values, setValues] = useState([]);
-  const maxValues = 4;
+  const maxValues = 2;
   const isAddDisabled = values.length >= maxValues;
   const [result, setResult] = useState(null);
   const [labelText, setLabelText] = useState("Enter the first value:");
   const labelSteps = [
     "Enter the first value:",
-    "Enter the second value:",
-    "Enter the third value",
-    "Enter the limit value:"
+    "Enter the final value:"
   ];
 
   function handleAdd() {
@@ -31,15 +29,14 @@ function Tribonacci() {
   return (
     <div className='Result_area'>
         <div className='Monitor'>
-          <p>Welcome to the Tribonacci sequence!</p> 
+          <p>Welcome to the Cubes sequence!</p>
           <p>
-            Enter three initial values and a limit value to obtain the sequence. 
-            Remember that the initial values cannot be 0 and the limit value must 
-            be greater than the initial ones.
-          </p>   
+            Enter the initial and the final value to obtain the sequence within this range. 
+            Remember that the final value must be greater than the initial one.
+          </p>  
           <ul>
             {values.map((v, i) => {
-              const names = ["1° Value:", "2° Value:", "Limit:"];
+              const names = ["Initial Value:", "Final Value:"];
               const label = names[i] || `value${i+1}`;
               return <li key={i}>{label} = {v}</li>;
             })}
@@ -61,9 +58,9 @@ function Tribonacci() {
           setValues={setValues}
           setResult={setResult} 
           values={values}
-          operation="tribonacci"
+          operation="cubes"
         />
     </div>
   );
 }
-export default Tribonacci;
+export default Cubes;

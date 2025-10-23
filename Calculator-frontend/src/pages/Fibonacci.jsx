@@ -8,12 +8,23 @@ function Fibonacci() {
   const maxValues = 3;
   const isAddDisabled = values.length >= maxValues;
   const [result, setResult] = useState(null);
-  
+  const [labelText, setLabelText] = useState("Enter the first value:");
+  const labelSteps = [
+    "Enter the first value:",
+    "Enter the second value:",
+    "Enter the limit value:"
+  ];
+
   function handleAdd() {
     if (currentValue.trim() === "") return;
     setValues(prev => [...prev, Number(currentValue)]);
     setCurrentValue("");
     setResult(null);
+
+    const nextIndex = values.length + 1;
+    if (nextIndex < labelSteps.length) {
+      setLabelText(labelSteps[nextIndex]);
+    }
   }
 
   return (
@@ -24,7 +35,11 @@ function Fibonacci() {
             Remember that the initial values cannot be 0 and the limit value must 
             be greater than the initial ones.</p>
           <ul>
-            {values.map((v, i) => <li key={i}>Value{i+1} = {v}</li>)}
+            {values.map((v, i) => {
+              const names = ["1° Value:", "2° Value:", "Limit:"];
+              const label = names[i] || `value${i+1}`;
+              return <li key={i}>{label} = {v}</li>;
+            })}
           </ul>
           <p>Result:</p>
           {result?.error ? (
@@ -34,10 +49,9 @@ function Fibonacci() {
           )}
         </div>
         <div className='Forms'>
-                Enter here the values:<br />
-                <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
-                <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>
-                
+          <label>{labelText}</label><br />
+          <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
+          <button onClick={handleAdd} disabled={isAddDisabled}>Add</button>    
         </div>
         <Keypad 
           setCurrentValue={setCurrentValue} 
