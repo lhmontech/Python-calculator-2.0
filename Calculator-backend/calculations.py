@@ -30,12 +30,12 @@ def tribonacci(Value1, Value2, Value3, limit):
         return {'sequence': tribonacciList}
 
 # --- geometric's function ---
-def geometric(Value1, Ratio, Value2):
-    if Ratio == 1 or Ratio == 0 or Ratio == -1:
+def geometric(Value1, Ratio, terms):
+    if Ratio <= 1 and Ratio >= -1:
         return {'error': f'You entered {Ratio} as the ratio, this creates an infinite sequence!'}
     else:
         geometricList = []
-        for i in range(Value1, Value2 + 1):
+        for i in range(1, terms + 1):
             geometricList.append(Value1)
             Value1 = Value1 * Ratio
         return {'sequence': geometricList}
@@ -84,16 +84,13 @@ def primes(Value1, Value2):
     return {'sequence': primesList}
 
 # --- alternating sequence's function ---
-def alternating(Value1, Value2):
-    if Value1 > Value2:
-        return {'error':'Invalid limit! Enter a limit greater than the initial value!'}
-    else:
-        alternatingList = []
-        for i in range(Value1, Value2 + 1):
-            alternatingList.append(Value1)
-            Value1 = Value1 * 2
-            Value1 = Value1 * -1
-        return {'sequence': alternatingList}
+def alternating(Value1, terms):
+    alternatingList = []
+    for i in range(1, terms + 1):
+        alternatingList.append(Value1)
+        Value1 = Value1 * 2
+        Value1 = Value1 * -1
+    return {'sequence': alternatingList}
 
 # --- function of cubes ---
 def cubes(Value1, Value2):
@@ -103,7 +100,8 @@ def cubes(Value1, Value2):
         cubesList = []
         for i in range(Value1, Value2 + 1):
             result = i ** 3
-            cubesList.append(result)
+            if (result >= Value1) and (result <= Value2):
+                cubesList.append(result)
             i += 1
         return {'sequence': cubesList}
 
@@ -117,7 +115,7 @@ def binDecimal(Value1):
             binary = Value1 % 2
             binaryList.append(binary)
             Value1 = Value1 // 2
-        return {'sequence': ''.join(map(str, binaryList[::-1]))}
+        return {'result': ''.join(map(str, binaryList[::-1]))}
 
 # --- function decimal to hexadecimal ---
 def hexaDecimal(Value1):
@@ -130,4 +128,14 @@ def hexaDecimal(Value1):
             hexa = Value1 % 16
             hexaList.append(hexaMap[hexa])
             Value1 = Value1 // 16
-        return {'sequence': ''.join(map(str, hexaList[::-1]))}
+        return {'result': ''.join(map(str, hexaList[::-1]))}
+
+# --- function of common calculations ---
+def common(expression):
+    result = eval(expression, {"__builtins__": None}, {})
+    return {'result': result}
+
+# --- function of triangular number ---
+def triangular(Value1):
+    result = (Value1*(Value1+1))/2
+    return {'result': result}

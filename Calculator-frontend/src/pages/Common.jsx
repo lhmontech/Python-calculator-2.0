@@ -9,7 +9,7 @@ function Common() {
 
   useEffect(() => {
     if (currentValue.trim() !== "") {
-      setValues([Number(currentValue)]);
+      setValues([currentValue]);
       setResult(null);
     } else {
       setValues([]);
@@ -31,7 +31,7 @@ function Common() {
         </div>
         <div className='Forms'>
           <label>Enter the expression:</label><br />
-          <input type="number" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
+          <input type="text" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
         </div>
         <Keypad 
           setCurrentValue={setCurrentValue} 
