@@ -3,10 +3,6 @@ from calculations import *
 
 routes = Blueprint('routes', __name__)
 
-@routes.route('/')
-def home():
-    return 'API Calculator 2.0 running!'
-
 # --- fibonacci's route ---
 @routes.route('/fibonacci', methods=['POST'])
 def fibonacci_route():
