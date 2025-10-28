@@ -82,7 +82,20 @@ body {
   padding: 10px;
   min-width: 300px;
   height: 450px;
-  min-height: 300px;
+  max-height: 500px;
+  color: #F2E94E;
+  border: 3px solid #616161;
+  border-radius: 25px;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+}
+
+.MonitorCM {
+  background: #171717;
+  padding: 10px;
+  min-width: 300px;
+  height: 400px;
+  max-height: 500px;
   color: #F2E94E;
   border: 3px solid #616161;
   border-radius: 25px;
@@ -196,12 +209,27 @@ body {
   padding: 5px;
 }
 
+.Keypad .operator {
+  background: #e0ff32;
+  align-content: center;
+  color: #000000;
+  font-weight: 600;
+  margin: 10px 15px 10px 15px;
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+}
+
 .Keypad .Clean_but:hover {
   background: #b83445;
 }
 
 .Keypad .Calc_but:hover {
   background: #1b62d4;
+}
+
+.Keypad .operator:hover {
+  background: #99ad23;
 }
 
 .Keypad button:hover {

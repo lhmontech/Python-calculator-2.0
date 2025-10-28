@@ -39,7 +39,7 @@ function Tribonacci() {
           </p>   
           <ul>
             {values.map((v, i) => {
-              const names = ["1° Value:", "2° Value:", "Limit:"];
+              const names = ["1° Value:", "2° Value:", "3° Value:", "Limit:"];
               const label = names[i] || `value${i+1}`;
               return <li key={i}>{label} = {v}</li>;
             })}

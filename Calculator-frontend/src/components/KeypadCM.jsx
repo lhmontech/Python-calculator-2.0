@@ -1,7 +1,7 @@
 import '../App.css';
 import { useState } from "react";
 
-function Keypad({setCurrentValue, setValues, setResult, values, operation}) {
+function KeypadCM({setCurrentValue, setValues, setResult, values, operation}) {
   function onKeyPress(num) {
     setCurrentValue(prev => prev + num);
   }
@@ -29,20 +29,26 @@ function Keypad({setCurrentValue, setValues, setResult, values, operation}) {
   }
 
   return (
-      <div className='Keypad'>
+    <div className='Keypad'>
       <div>
+        <button onClick={() => onKeyPress('+')} className='operator'>+</button>
+        <button onClick={() => onKeyPress('-')} className='operator'>-</button>
         <button onClick={() => onKeyPress('1')}>1</button>
         <button onClick={() => onKeyPress('4')}>4</button>
         <button onClick={() => onKeyPress('7')}>7</button>
         <button onClick={() => onKeyPress('0')}>0</button>
       </div>
       <div>
+        <button onClick={() => onKeyPress('*')} className='operator'>x</button>
+        <button onClick={() => onKeyPress('/')} className='operator'>÷</button>
         <button onClick={() => onKeyPress('2')}>2</button>
         <button onClick={() => onKeyPress('5')}>5</button>
         <button onClick={() => onKeyPress('8')}>8</button>
         <button className='Clean_but' onClick={handleDelete}>Clean</button>
       </div>
       <div>
+        <button onClick={() => onKeyPress('(')}className='operator'>(</button>
+        <button onClick={() => onKeyPress(')')} className='operator'>)</button>
         <button onClick={() => onKeyPress('3')}>3</button>
         <button onClick={() => onKeyPress('6')}>6</button>
         <button onClick={() => onKeyPress('9')}>9</button>
@@ -52,4 +58,4 @@ function Keypad({setCurrentValue, setValues, setResult, values, operation}) {
     );
 }
 
-export default Keypad;
+export default KeypadCM;

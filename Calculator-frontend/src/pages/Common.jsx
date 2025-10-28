@@ -1,4 +1,4 @@
-import Keypad from "../components/Keypad";
+import KeypadCM from "../components/KeypadCM";
 import { useState, useEffect } from "react";
 import '../App.css';
 
@@ -18,7 +18,7 @@ function Common() {
 
   return (
     <div className='Result_area'>
-        <div className='Monitor'>
+        <div className='MonitorCM'>
           <p>Welcome to the Common Calculations!</p>   
           <p>Enter the expression you want to calculate.
           </p>
@@ -33,7 +33,7 @@ function Common() {
           <label>Enter the expression:</label><br />
           <input type="text" value={currentValue} onChange={(e) => setCurrentValue(e.target.value)}/>
         </div>
-        <Keypad 
+        <KeypadCM 
           setCurrentValue={setCurrentValue} 
           setValues={setValues}
           setResult={setResult} 

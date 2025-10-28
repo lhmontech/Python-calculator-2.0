@@ -46,7 +46,7 @@ function Menu() {
               Cubes sequence
             </NavLink>
             <NavLink to="/triangular" className={({ isActive }) => isActive ? "btn active" : "button"}>
-              Triangular numbers sequence
+              Triangular numbers
             </NavLink>
             <NavLink to="/hexadecimal" className={({ isActive }) => isActive ? "btn active" : "button"}>
               Conversion of decimal ↔ hexadecimal
