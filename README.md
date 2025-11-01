@@ -1,4 +1,4 @@
-🌍 Read this in [English](README.md) | Leia em [Português](https://github.com/lhmontech/Python-calculator-2.0/tree/feb674e330d471bb912c4ff3de78533858e3dd6d/Docs/Documenta%C3%A7%C3%A3o%20PT-BR/README.pt.md)
+🌍 Read this in [English](README.md) | Leia em [Português](https://github.com/lhmontech/Python-calculator-2.0/blob/main/Docs/Documenta%C3%A7%C3%A3o%20PT-BR/README.pt.md)
 
 <p align="center">
       <img src="Docs/PyCal-logo.png" alt="logo" width="200">
